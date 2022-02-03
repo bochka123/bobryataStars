@@ -3,11 +3,11 @@ home: true
 actionText: Розпочати →
 actionLink: /intro/
 
-footer: "ECL 2.0 Licensed | Copyright © [YYYY] [Your Name]"
+footer: "ECL 2.0 Licensed | Copyright © bobryataStars"
 ---
 
 
-**Виконав(-ла):** 
+**Виконали:** 
 
 *студент 2-го курсу, групи ІО-03* **Олександр ТКАЧ [Посилання tg](https://t.me/bochka1235)**
 
