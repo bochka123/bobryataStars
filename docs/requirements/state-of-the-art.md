@@ -13,7 +13,7 @@
  - мати зручний та простий у користуванні інтерфейс
 
 
-<span style="color:red"> sbhcjhsdcdshc </span>
+<span style="color:red"></span>
 
 ## Основні визначення
 
