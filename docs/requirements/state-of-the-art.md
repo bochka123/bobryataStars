@@ -172,7 +172,7 @@
 
 Умовно безкоштовний сервіс створений лише для смартфонів. Має можливість створювати форми офлайн, дозволяє відправити зібрану інформацію на будь-який хмарний сервіс.
 
-### Система ["ОСА"]() ###
+### Система ["ОСА"](https://oca.com.ua/) ###
 
 Комп'ютерна технологія статичстичного аналіу даних. Одна з найстаріших технологій. Досить популярна на території СНГ. Створена при підтримці НАН України.
 
@@ -217,4 +217,8 @@
  * <a name="link5">[Методи експертних оцінок](http://surl.li/btdji)
  * <a name="link6">[Анкета](https://vue.gov.ua/%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0)
  * <a name="link7">[Структура та оформлення анкети](https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0)
-
+ * [Google Forms](https://www.google.com/intl/ru_ua/forms/about/)
+ * [Microsoft Forms](https://www.microsoft.com/uk-ua/microsoft-365/online-surveys-polls-quizzes)
+ * [JotForm](https://www.jotform.com/ua/surveys/)
+ * [Device Magic](https://www.devicemagic.com/)
+ * Система ["ОСА"](https://oca.com.ua/)
