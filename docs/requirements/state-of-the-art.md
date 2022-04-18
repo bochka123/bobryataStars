@@ -172,7 +172,7 @@
 
 ## Посилання
 
- * <a name="link1" href="https://ips.ligazakon.net/document/TM047084" target="_blank">[Експерт]</a>
+ * <a name="link1">[Експерт](https://ips.ligazakon.net/document/TM047084)
  * <a name="link2">[Експертний потенціал](https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82)
  * <a name="link3">[Експертна оцінка](https://esu.com.ua/search_articles.php?id=18826)
  * <a name="link4">[Методи експертних оцінок](http://surl.li/btdig)
