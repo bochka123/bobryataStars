@@ -22,11 +22,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Створити опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про створення опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.002</b>
+             <font color=000 size=10>bobr.DATA.EX.002
              <font color=000 size=10>bobr.DATA.EX.003
          end header
 
@@ -74,12 +74,12 @@
              <font color=000 size=10><b>НАЗВА:</b> Редагувати опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про змінення даних опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
-             <font color=000 size=10>bobr.DATA.EX.002</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
              <font color=000 size=10>bobr.DATA.EX.003
          end header
 
@@ -132,11 +132,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Отримати результати опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -181,11 +181,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Закрити опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -231,11 +231,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Відновити роботу опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -282,9 +282,9 @@
              <font color=000 size=10><b>НАЗВА:</b> Повідомити про відсутність запитаних даних
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач запитав дані, що відсутні у системі.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відсутність запитаних даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відсутність запитаних даних.
          end header
 
          |Користувач|
@@ -317,7 +317,7 @@
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
              <font color=000 size=10>Система відхилила запит користувача до даних.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення доступу до даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення доступу до даних.
          end header
 
          |Користувач|
@@ -349,9 +349,9 @@
              <font color=000 size=10><b>НАЗВА:</b> Відхилити хибні дані
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач надіслав у систему хибні дані.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення хибних даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення хибних даних.
          end header
 
          |Користувач|
