@@ -22,11 +22,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Створити опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про створення опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.002</b>
+             <font color=000 size=10>bobr.DATA.EX.002
              <font color=000 size=10>bobr.DATA.EX.003
          end header
 
@@ -74,12 +74,12 @@
              <font color=000 size=10><b>НАЗВА:</b> Редагувати опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про змінення даних опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
-             <font color=000 size=10>bobr.DATA.EX.002</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
              <font color=000 size=10>bobr.DATA.EX.003
          end header
 
@@ -132,11 +132,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Отримати результати опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -181,11 +181,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Закрити опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -231,11 +231,11 @@
              <font color=000 size=10><b>НАЗВА:</b> Відновити роботу опитування
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач має доступ до запитаної організації.
              <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
              <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
-             <font color=000 size=10>bobr.DATA.EX.001</b>
+             <font color=000 size=10>bobr.DATA.EX.001
              <font color=000 size=10>bobr.DATA.EX.002
          end header
 
@@ -269,12 +269,318 @@
   @enduml
 
     </center>
-
-
-- ID: bobr.DATA.EX.001
+- ID: bobr.ORGANIZATION.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.001
+             <font color=000 size=10><b>НАЗВА:</b> Зареєструвати організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.003
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про створення організації
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на створення організації ;
+
+         |Система|
+             : Надає користувачу форму для заповнення даних про організацію ;
+
+         |Користувач|
+             : Надає у формі потрібні дані про організацію ;
+
+         |Система|
+             : Перевіряє правильність надісланих даних ;
+             
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+             end note
+
+             : Реєструє організацію ;
+
+             : Додає користувача до створеної організації ;
+
+             : Надсилає користувачу дані про реєстрацію організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ORGANIZATION.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.002
+             <font color=000 size=10><b>НАЗВА:</b> Приєднатися до існуючої організації
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Повідомлення про приєднання до організації
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на приєднання до існуючої організації ;
+
+         |Система|
+             : Надає користувачу список організацій ;
+
+         |Користувач|
+             : Обирає організацію з наданого системою списку ;
+
+             : Надає дані для перевірки належності до організації ;
+
+         |Система|
+             : Перевіряє надані користувачем дані ;
+             
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Надсилає користувачу дані про приєднання до організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+    </center>
+
+- ID: bobr.ORGANIZATION.003
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.003
+             <font color=000 size=10><b>НАЗВА:</b> Отримати дані про організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Дані про організацію
+         end header
+
+         |Користувач|
+             start
+             : Запитує дані про організацію ;
+
+         |Система|
+             : Перевіряє, чи існує організація ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Знаходить дані про організацію ;
+
+             : Авторизує користувача для отримання даних про організацію ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Надсилає користувачу дані про організацію ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ORGANIZATION.004
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.004
+             <font color=000 size=10><b>НАЗВА:</b>  Змінити дані про організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+                <font color=000 size=10>bobr.DATA.EX.003
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Дані про організацію
+         end header
+
+         |Користувач|
+             start
+             : Запитує зміну даних про організацію ;
+
+         |Система|
+             : Перевіряє, чи існує організація (можлива bobr.DATA.EX.001) ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Знаходить дані про організацію ;
+
+             : Надає користувачу форму для заповнення змінених даних про організацію ;
+
+         |Користувач|
+             : Заповнює форму зміненими даними ;
+
+         |Система|
+             : Перевіряє правильність надісланих даних ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+             end note
+
+             : Змінює дані про організацію ;
+
+             : Надсилає користувачу повідомлення про зміну даних організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+- ID: bobr.NOT_LOGGED.EX.001
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.EX.001
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити запит на реєстрацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач не зареєстрований у системі.
+             <font color=000 size=10>Клієнт надіслав хибні дані реєстрації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення реєстрації.
+        end header
+        |Система|
+             start
+             : Надає користувачу повідомлення про відхилення реєстрації ;
+
+         |Користувач|
+             : Отримує повідомлення про відхилення реєстрації ;
+
+         |Система|
+             : Завершує взаємодію ;
+
+             stop;
+    @enduml
+
+    </center>
+- ID: bobr.NOT_LOGGED.EX.002
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.EX.002
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити спробу авторизації через помилку ідентифікації
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач не авторизований у системі.
+             <font color=000 size=10>Система не змогла ідентифікувати користувача.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про помилку спроби авторизації
+        end header
+        |Система|
+             start
+             : Надає користувачу повідомлення про відхилення авторизації через помилку ідентифікації ;
+
+         |Користувач|
+             : Отримує повідомлення про відхилення авторизації через помлку ідентифікації ;
+
+         |Система|
+             : Завершує взаємодію ;
+
+             stop;
+    @enduml
+
+    </center>
+- ID: bobr.NOT_LOGGED.EX.003
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.EX.003
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити спробу авторизації через помилку аутентифікації
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Клієнт не авторизований у системі.
+             <font color=000 size=10>Система не змогла аутентифікувати користувача.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>  Повідомлення про спроби авторизації
+        end header
+        |Система|
+             start
+             : Надає користувачу повідомлення про відхилення авторизації через помилку аутентифікації ;
+
+         |Користувач|
+             : Отримує повідомлення про відхилення авторизації через помилку аутентифікації ;
+
+         |Система|
+             : Завершує взаємодію ;
+
+             stop;
+    @enduml
+
+    </center>
+- ID: bobr.NOT_LOGGED.EX.004
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.EX.004
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити доступ для неавторизованого користувача
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач не авторизований у системі.
+             <font color=000 size=10>Система відхилила запит неавторизованого користувача.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>  Повідомлення про відхиленя доступу для неавторизованого користувача
+        end header
+        |Система|
+             start
+             : Надає користувачу повідомлення про відхиленя доступу для неавторизованого користувача ;
+
+         |Користувач|
+             : Отримує повідомлення про відхиленя доступу для неавторизованого користувача ;
+
+         |Система|
+             : Завершує взаємодію ;
+
+             stop;
+    @enduml
+
+    </center>
+- ID: bobr.DATA.EX.001
+<center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
 
         left header
@@ -282,9 +588,9 @@
              <font color=000 size=10><b>НАЗВА:</b> Повідомити про відсутність запитаних даних
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач запитав дані, що відсутні у системі.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відсутність запитаних даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відсутність запитаних даних.
          end header
 
          |Користувач|
@@ -317,7 +623,7 @@
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
              <font color=000 size=10>Система відхилила запит користувача до даних.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення доступу до даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення доступу до даних.
          end header
 
          |Користувач|
@@ -349,9 +655,9 @@
              <font color=000 size=10><b>НАЗВА:</b> Відхилити хибні дані
              <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
              <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
-             <font color=000 size=10>Користувач авторизований у системі.</b>
+             <font color=000 size=10>Користувач авторизований у системі.
              <font color=000 size=10>Користувач надіслав у систему хибні дані.
-             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення хибних даних
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення хибних даних.
          end header
 
          |Користувач|
@@ -371,3 +677,5 @@
   @enduml
 
     </center>
+
+
