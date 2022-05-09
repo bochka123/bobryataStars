@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "Databases labs template",
   "repository": "https://github.com/bochka123/bobryataStars",
-  "author": "Oleksndr Tkach <sasha2003tkach001100@gmail.com>",
+  "author": "Yaroslav Bugayov <bugayov576@gmail.com>",
   "license": "ECL 2.0",
   "scripts": {
     "docs:dev": "npx vuepress dev docs",

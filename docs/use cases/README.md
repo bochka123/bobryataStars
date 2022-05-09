@@ -8,142 +8,570 @@
 
 Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
 
-В markdown-файлі використовується опис діаграми
+## Сценарії використання для користувача
+<br><br>
 
-```md
+- ID: bobr.ADMIN.001
 
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
-@startuml
+  @startuml
 
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ADMIN.001
+             <font color=000 size=10><b>НАЗВА:</b> Створити опитування
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про створення опитування.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+             <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10>bobr.DATA.EX.003
+         end header
 
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
+         |Користувач|
+             start
+             : Надсилає запит на створення опитування та його дані ;
+             : Заповнює дані про опитування:
+             Логін, пароль та пошта;
+
+         |Система|
+             : Перевіряє право створення користувачем опитування ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Перевіряє правильність надісланих даних ;
+
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+             end note
+
+             : Створює опитування;
+
+             : Надсилає користувачу повідомлення про створення опитування ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ADMIN.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ADMIN.002
+             <font color=000 size=10><b>НАЗВА:</b> Редагувати опитування
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про змінення даних опитування.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10>bobr.DATA.EX.003
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на змінення даних опитування ;
+
+         |Система|
+             : Знаходить дані про організацію та опитування ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Перевіряє право на зміну опитування ;
+
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Перевіряє правильність надісланих даних ;
+
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+            end note
+
+             : Змінює опитування;
+
+             : Надсилає користувачу повідомлення про змінення опитування ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ADMIN.003
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ADMIN.003
+             <font color=000 size=10><b>НАЗВА:</b> Отримати результати опитування
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на отримання результатів опитування ;
+
+         |Система|
+             : Знаходить дані про опитування ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Перевіряє право на отримання результатів опитування ;
+
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Надсилає користувачу результати опитування ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
 
 
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
+- ID: bobr.ADMIN.004
 
-@enduml
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
-**Діаграма прецедентів**
+  @startuml
 
-</center>
-```
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ADMIN.004
+             <font color=000 size=10><b>НАЗВА:</b> Закрити опитування
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
+         end header
 
-яка буде відображена наступним чином
+         |Користувач|
+             start
+             : Надсилає запит на закриття опитування ;
 
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
+         |Система|
+             : Знаходить дані про опитування ;
 
-@startuml
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
 
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
+             : Перевіряє право на закриття опитування ;
 
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+             
+             : Закриває опитування ;
+
+             : Надсилає користувачу результати опитування та повідомлення про його закриття ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ADMIN.005
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ADMIN.005
+             <font color=000 size=10><b>НАЗВА:</b> Відновити роботу опитування
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Результати опитування.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+             <font color=000 size=10>bobr.DATA.EX.001
+             <font color=000 size=10>bobr.DATA.EX.002
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на відновлення роботи опитування ;
+
+         |Система|
+             : Знаходить дані про опитування ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Перевіряє право на відновлення роботи опитування ;
+
+            note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+             
+             : Відновлює роботу опитування ;
+
+             : Надсилає користувачу повідомлення про відновлення роботи опитування ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
 
 
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
+- ID: bobr.DATA.EX.001
 
-@enduml
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
-**Діаграма прецедентів**
+  @startuml
 
-</center>
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.DATA.EX.001
+             <font color=000 size=10><b>НАЗВА:</b> Повідомити про відсутність запитаних даних
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач запитав дані, що відсутні у системі.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відсутність запитаних даних.
+         end header
 
+         |Користувач|
+             start
+             : Запитує дані, що відсутні у системі ;
+
+         |Система|
+             : Надає користувачу повідомлення про відсутність запитаних даних ;
+
+         |Користувач|
+             : Отримує повідомлення ;
+
+             : Завершує взаємодію ;
+
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.DATA.EX.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.DATA.EX.002
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити доступ користувача до даних.
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Система відхилила запит користувача до даних.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення доступу до даних.
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на отримання даних, до яких в нього немає доступу ;
+
+         |Система|
+             : Надає користувачу повідомлення про відхилення доступу до даних ;
+
+         |Користувач|
+             : Отримує повідомлення ;
+
+             : Завершує взаємодію ;
+
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.DATA.EX.003
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.DATA.EX.003
+             <font color=000 size=10><b>НАЗВА:</b> Відхилити хибні дані
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+             <font color=000 size=10>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач надіслав у систему хибні дані.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення хибних даних.
+         end header
+
+         |Користувач|
+             start
+             : Надсилає у систему хибні дані ;
+
+         |Система|
+             : Надає користувачу повідомлення про відхилення хибних даних ;
+
+         |Користувач|
+             : Отримує повідомлення ;
+
+             : Завершує взаємодію ;
+
+             stop;
+
+  @enduml
+
+    </center>
+
+
+- ID: bobr.ORGANIZATION.001
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.001
+             <font color=000 size=10><b>НАЗВА:</b> Зареєструвати організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.003
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про створення організації
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на створення організації ;
+
+         |Система|
+             : Надає користувачу форму для заповнення даних про організацію ;
+
+         |Користувач|
+             : Надає у формі потрібні дані про організацію ;
+
+         |Система|
+             : Перевіряє правильність надісланих даних ;
+             
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+             end note
+
+             : Реєструє організацію ;
+
+             : Додає користувача до створеної організації ;
+
+             : Надсилає користувачу дані про реєстрацію організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ORGANIZATION.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.002
+             <font color=000 size=10><b>НАЗВА:</b> Приєднатися до існуючої організації
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Повідомлення про приєднання до організації
+         end header
+
+         |Користувач|
+             start
+             : Надсилає запит на приєднання до існуючої організації ;
+
+         |Система|
+             : Надає користувачу список організацій ;
+
+         |Користувач|
+             : Обирає організацію з наданого системою списку ;
+
+             : Надає дані для перевірки належності до організації ;
+
+         |Система|
+             : Перевіряє надані користувачем дані ;
+             
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Надсилає користувачу дані про приєднання до організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+    </center>
+
+- ID: bobr.ORGANIZATION.003
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.003
+             <font color=000 size=10><b>НАЗВА:</b> Отримати дані про організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Дані про організацію
+         end header
+
+         |Користувач|
+             start
+             : Запитує дані про організацію ;
+
+         |Система|
+             : Перевіряє, чи існує організація ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Знаходить дані про організацію ;
+
+             : Авторизує користувача для отримання даних про організацію ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.002</b>
+             end note
+
+             : Надсилає користувачу дані про організацію ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
+
+- ID: bobr.ORGANIZATION.004
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.ORGANIZATION.004
+             <font color=000 size=10><b>НАЗВА:</b>  Змінити дані про організацію
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>Користувач авторизований у системі.
+             <font color=000 size=10>Користувач має доступ до запитаної організації.
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+                <font color=000 size=10>bobr.DATA.EX.003
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Дані про організацію
+         end header
+
+         |Користувач|
+             start
+             : Запитує зміну даних про організацію ;
+
+         |Система|
+             : Перевіряє, чи існує організація (можлива bobr.DATA.EX.001) ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.001</b>
+             end note
+
+             : Знаходить дані про організацію ;
+
+             : Надає користувачу форму для заповнення змінених даних про організацію ;
+
+         |Користувач|
+             : Заповнює форму зміненими даними ;
+
+         |Система|
+             : Перевіряє правильність надісланих даних ;
+
+             note right #ff0000
+             <b>Можлива</b>
+             <b>bobr.DATA.EX.003</b>
+             end note
+
+             : Змінює дані про організацію ;
+
+             : Надсилає користувачу повідомлення про зміну даних організації ;
+
+         |Користувач|
+             : Завершує взаємодію ;
+             stop;
+
+  @enduml
+
+    </center>
