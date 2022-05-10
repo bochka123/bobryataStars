@@ -11,6 +11,186 @@
 ## Сценарії використання для користувача
 <br><br>
 
+- ID: bobr.USER.001
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+                <font color=000 size=10><b>ID:</b> bobr.USER.001
+                <font color=000 size=10><b>НАЗВА:</b> Отримати дані для проходження опитування
+                <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+                <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+                <font color=000 size=10>Користувач авторизований у системі.
+                <font color=000 size=10>Користувач має доступ до запитаного опитування.
+                <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Дані для проходження опитування.
+                <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+            end header
+            |Користувач|
+            start
+            :Запитує дані для проходження опитування;
+
+            |Система|
+            :Знаходить дані для проходження опитування;
+            note right: можлива bobr.DATA.EX.001
+            :Авторизує користувача для отримання даних;
+            note right: можлива bobr.DATA.EX.002
+            :Надає дані для проходження опитування;
+
+            |Користувач|
+            :Отримує дані для проходження опитування;
+            :Завершує вазємодію;
+            stop
+
+
+            <style>
+            note{
+                BackgroundColor: red;
+            }
+            </style>
+
+  @enduml
+
+    </center>
+
+
+- ID: bobr.USER.002
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+                <font color=000 size=10><b>ID:</b> bobr.USER.002
+                <font color=000 size=10><b>НАЗВА:</b> Надіслати результати опитування користувача.
+                <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+                <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+                <font color=000 size=10>Користувач авторизований у системі.
+                <font color=000 size=10>Користувач має доступ до запитаного опитування.
+                <font color=000 size=10>Користувач коректно пройшов опитування.
+                <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про зарахування результатів опитування користувача
+                <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+                <font color=000 size=10>bobr.DATA.EX.003
+            end header
+            |Користувач|
+            start
+            :Надає дані про проходження опитування;
+
+            |Система|
+            :Знаходить дані про запитане опитування;
+            note right: можлива bobr.DATA.EX.001
+            :Авторизує користувача для проходження опитування;
+            note right: можлива bobr.DATA.EX.002
+            :Перевіряє правильність даних про проходження опитування;
+            note right: можлива bobr.DATA.EX.003
+            :Надає користувачу повідомлення про зарахування результатів опитування;
+
+            |Користувач|
+            :Завершує вазємодію;
+            stop
+
+
+            <style>
+            note{
+            BackgroundColor: red;
+            }
+            </style>
+
+  @enduml
+
+    </center>
+
+- ID: bobr.USER.003
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+                <font color=000 size=10><b>ID:</b> bobr.USER.003
+                <font color=000 size=10><b>НАЗВА:</b> Отримати зворотній зв'язок.
+                <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+                <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+                <font color=000 size=10>Користувач авторизований у системі.
+                <font color=000 size=10>У системі є дані про зворотній зв'язок.
+                <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Отримання користувачем зворотнього зв'язку.
+                <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.DATA.EX.001
+                <font color=000 size=10>bobr.DATA.EX.002
+            end header
+            |Користувач|
+            start
+            :Натискає на отримання даних про зворотній зв'язок;
+
+            |Система|
+            :Перевіряє, чи існує задане опитування;
+            note right: можлива bobr.DATA.EX.001
+            :Перевіряє, чи є доступ у користувача до заданого опитування;
+            note right: можлива bobr.DATA.EX.002
+            :Шукає дані про задане опитування;
+            :Надає користувачу дані про зворотній зв'язок стосовно опитування;
+
+            |Користувач|
+            :Завершує вазємодію;
+            stop
+
+
+            <style>
+            note{
+            BackgroundColor: red;
+            }
+            </style>
+
+  @enduml
+
+    </center>
+
+- ID: bobr.USER.004
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+  @startuml
+
+        left header
+                <font color=000 size=10><b>ID:</b> bobr.USER.004
+                <font color=000 size=10><b>НАЗВА:</b> Подати заявку на отримання права адміністратора.
+                <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+                <font color=000 size=10><b>ПЕРЕДУМОВИ:</b>
+                <font color=000 size=10>Користувач авторизований у системі.
+                <font color=000 size=10>У користувача є достатні матеріальні можливості.
+                <font color=000 size=10><b>РЕЗУЛЬТАТ:</b>Отримання користувачем прав адміністратора.
+                <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b>
+                <font color=000 size=10>bobr.MONEY.EX.001
+                <font color=000 size=10>bobr.MONEY.EX.002
+            end header
+            |Користувач|
+            start
+            :Натискає на отримання права адміністратора;
+
+            |Система|
+            :Надає користувачу форму для заповнення платіжних даних;
+            :Перевіряє платіжні дані;
+            note right: можлива bobr.MONEY.EX.001
+            :Здійснює платіж;
+            note right: можлива bobr.MONEY.EX.002
+            :повідомляє користувача про успішний перебіг транзакції та отримання прав адміністратора;
+
+            |Користувач|
+            :Завершує вазємодію;
+            stop
+
+
+            <style>
+            note{
+            BackgroundColor: red;
+            }
+            </style>
+
+  @enduml
+
+    </center>
+
 - ID: bobr.ADMIN.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
