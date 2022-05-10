@@ -24,7 +24,7 @@
             Admin --|> User
             User --|> NonUser
         @enduml
-    </center>
+</center>
 
 ## Схема використання для користувача
 <br><br>
@@ -44,7 +44,7 @@
         NL .u.> AUTH : extends
     @enduml
 
-    </center>
+</center>
 
 
 ## Схема використання для авторизованого користувача
@@ -83,7 +83,7 @@
 
     @enduml
 
-    </center>
+</center>
 
 ## Схема використання для адміністратора
 <br><br>
@@ -110,7 +110,7 @@
         AD .u.> AD5: extends
     @enduml
 
-    </center>
+</center>
 
 ## Сценарії використання для користувача
 <br><br>
