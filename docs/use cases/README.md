@@ -1,12 +1,116 @@
+# Вступ
+
+Цей документ містить в собі опис основних сценаріїв роботи системи.
+
 # Модель прецедентів
 
-В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.
+В даному файлі наведені графічні діаграми що відображують бізнес процеси.
 
-*Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів.*
-
-
+В markdown-файлі використовується опис діаграми.
 
 Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
+
+## Діаграма прецедентів
+<br><br>
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+        @startuml
+            "Адміністратор" as Admin
+            "Користувач" as User
+            "Неавторизований користувач" as NonUser
+            Admin -R-> (ADMIN\nАдміністрування опитувань)
+            User -R-> (USER\nДіяльність користувача)
+            User -R-> (ORGANIZATION\nРобота з організаціями)
+            NonUser -R-> (NOT_LOGGED\nРеєстрація та авторизація)
+            Admin --|> User
+            User --|> NonUser
+        @enduml
+    </center>
+
+## Схема використання для користувача
+<br><br>
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+        actor Користувач
+
+        usecase "**NOT_LOGGED**\nРеєстрація та авторизація" as NL
+
+        Користувач-r-> NL
+
+        usecase "**NOT_LOGGED.001**\nЗареєструватись у системі" as REG
+        usecase "**NOT_LOGGED.002**\nАвторизуватись у системі" as AUTH
+
+        NL .u.> REG : extends
+        NL .u.> AUTH : extends
+    @enduml
+
+    </center>
+
+
+## Схема використання для авторизованого користувача
+<br><br>
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+        actor "Авторизований користувач" as User
+
+        usecase "**USER**\nДіяльність користувача" as NL
+        usecase "**ORGANIZATION**\nРобота з організаціями" as OG
+
+        User-u-> NL
+        User-d-> OG
+
+
+        usecase "**USER.001**\nОтримати дані для проходження опитування" as US1
+        usecase "**USER.002**\nНадіслати результати опитування користувача" as US2
+        usecase "**USER.003**\nОтримати зворотній зв'язок" as US3
+        usecase "**USER.004**\nПодати заявку на отримання права адміністратора" as US4
+
+        usecase "**ORGANIZATION.001**\nЗареєструвати організацію" as OG1
+        usecase "**ORGANIZATION.001**\nПриєднатися до існуючої організації" as OG2
+        usecase "**ORGANIZATION.001**\nОтримати дані про організацію" as OG3
+        usecase "**ORGANIZATION.001**\nЗмінити дані про організацію" as OG4
+
+        NL .u.> US1: extends
+        NL .u.> US2: extends
+        NL .u.> US3: extends
+        NL .u.> US4: extends
+
+        OG .d.> OG1: extends
+        OG .d.> OG2: extends
+        OG .d.> OG3: extends
+        OG .d.> OG4: extends
+
+    @enduml
+
+    </center>
+
+## Схема використання для адміністратора
+<br><br>
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+        actor "Адміністратор" as Admin
+
+        usecase "**ADMIN**\nАдміністрування опитувань" as AD
+
+        Admin-u-> AD
+
+
+        usecase "**ADMIN.001**\nСтворити опитування" as AD1
+        usecase "**ADMIN.002**\nРедагувати опитування" as AD2
+        usecase "**ADMIN.003**\nОтримати результати опитування" as AD3
+        usecase "**ADMIN.004**\nЗакрити опитування" as AD4
+        usecase "**ADMIN.005**\nВідновити роботу опитування" as AD5
+
+        AD .u.> AD1: extends
+        AD .u.> AD2: extends
+        AD .u.> AD3: extends
+        AD .u.> AD4: extends
+        AD .u.> AD5: extends
+    @enduml
+
+    </center>
 
 ## Сценарії використання для користувача
 <br><br>
