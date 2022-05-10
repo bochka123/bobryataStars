@@ -631,7 +631,6 @@
 
     </center>
 
-    </center>
 
 - ID: bobr.ORGANIZATION.003
 
