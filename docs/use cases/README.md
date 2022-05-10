@@ -11,7 +11,6 @@
 ## Сценарії використання для користувача
 <br><br>
 
-<<<<<<< HEAD
 - ID: bobr.NOT_LOGGED.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -91,7 +90,7 @@
                 :Завершує взаємодію;
                 stop
     @enduml
-=======
+
 - ID: bobr.USER.001
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
@@ -269,7 +268,6 @@
             </style>
 
   @enduml
->>>>>>> d4ad3b94d1d2e90a9e6d8f6bf75799ef1752b622
 
     </center>
 
@@ -1009,7 +1007,7 @@
         |Система|
             :Завершує взаємодію;
             stop
-            
+
     @enduml
 
     </center>
