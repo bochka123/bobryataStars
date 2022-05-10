@@ -90,7 +90,10 @@
                 :Завершує взаємодію;
                 stop
     @enduml
+    </center>
 
+## Сценарії для авторизованого користувача
+<br><br>
 - ID: bobr.USER.001
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
@@ -271,6 +274,8 @@
 
     </center>
 
+## Сценарії для адміністратора
+<br><br>
 - ID: bobr.ADMIN.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -529,7 +534,9 @@
   @enduml
 
     </center>
-    
+ 
+## Сценарії для менеджера організацій
+<br><br>   
 - ID: bobr.ORGANIZATION.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -733,6 +740,8 @@
 
     </center>
 
+## Виключні випадки
+<br><br>  
 - ID: bobr.NOT_LOGGED.EX.001
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
