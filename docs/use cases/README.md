@@ -11,6 +11,88 @@
 ## Сценарії використання для користувача
 <br><br>
 
+- ID: bobr.NOT_LOGGED.001
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+
+        left header
+            <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.001
+            <font color=000 size=10><b>НАЗВА:</b> Зареєструватись у системі
+            <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+            <font color=000 size=10><b>ПЕРЕДУМОВИ:</b> Користувач не зареєстрований у системі.
+            <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Новий обліковий запис
+            <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b> bobr.NOT_LOGGED.EX.001
+            <font color=000 size=10>
+        end header
+
+        |Користувач|
+            start
+            :Натискає кнопку "Реєстрація";
+            :Вводить реєстраційні дані:
+            Логін, пароль та пошта;
+
+        |Система|
+            :Перевіряє введені реєстраційні дані;
+            note right #red: можлива  bobr.NOT_LOGGED.EX.001
+
+        |Користувач|
+            :Реєструє компанію в системі (bobr.ORGANIZATION.001)
+            або приєднується до вже існуючої (bobr.ORGANIZATION.002);
+            note right: необов'язковий етап
+
+        |Система|
+            :Створює обліковий запис за переданими реєстраційними даними;
+            :Надає користувачу інформацію про створений обліковий запис;
+
+        |Користувач|
+            :Завершує взаємодію;
+            stop
+    @enduml
+
+    </center>
+
+- ID: bobr.NOT_LOGGED.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+
+        left header
+             <font color=000 size=10><b>ID:</b> bobr.NOT_LOGGED.002
+             <font color=000 size=10><b>НАЗВА:</b> Авторизуватись у системі
+             <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+             <font color=000 size=10><b>ПЕРЕДУМОВИ:</b> 
+             <font color=000 size=10> Користувач не зареєстрований у системі.
+             <font color=000 size=10> Користувач не авторизований у системі.
+             <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Авторизація у системі
+             <font color=000 size=10><b>ВИКЛЮЧНІ СИТУАЦІЇ:</b> 
+             <font color=000 size=10> bobr.NOT_LOGGED.EX.002
+             <font color=000 size=10> bobr.NOT_LOGGED.EX.003
+             <font color=000 size=10>
+         end header
+
+            |Користувач|
+            start
+                :Натискає кнопку "Вхід";
+                :Вводить реєстраційні дані:
+                Логін, пароль;
+
+            |Система|
+                :Ідентифікує користувача;
+                note right #red: можлива  bobr.NOT_LOGGED.EX.002
+                :Авторизує користувача;
+                note right #red: можлива  bobr.NOT_LOGGED.EX.003
+                :Надає користувачу авторизацію у системі;
+
+            |Користувач|
+                :Завершує взаємодію;
+                stop
+    @enduml
+
+    </center>
+
 - ID: bobr.ADMIN.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -269,6 +351,7 @@
   @enduml
 
     </center>
+    
 - ID: bobr.ORGANIZATION.001
 
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -471,6 +554,7 @@
   @enduml
 
     </center>
+
 - ID: bobr.NOT_LOGGED.EX.001
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
@@ -498,6 +582,7 @@
     @enduml
 
     </center>
+
 - ID: bobr.NOT_LOGGED.EX.002
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
@@ -525,6 +610,7 @@
     @enduml
 
     </center>
+
 - ID: bobr.NOT_LOGGED.EX.003
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
@@ -552,6 +638,7 @@
     @enduml
 
     </center>
+
 - ID: bobr.NOT_LOGGED.EX.004
     <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
@@ -579,6 +666,7 @@
     @enduml
 
     </center>
+
 - ID: bobr.DATA.EX.001
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
   @startuml
@@ -678,4 +766,70 @@
 
     </center>
 
+- ID: bobr.MONEY.EX.001
 
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+
+        left header
+            <font color=000 size=10><b>ID:</b> bobr.MONEY.EX.001
+            <font color=000 size=10><b>НАЗВА:</b> Невірні платіжні дані
+            <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+            <font color=000 size=10><b>ПЕРЕДУМОВИ:</b> 
+            <font color=000 size=10> Користувач авторизований у системі.
+            <font color=000 size=10> Користувач надіслав у систему невірні платіжні дані.
+            <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення оплати
+        end header
+
+        |Користувач|
+            start
+            :Вводить хибні платіжні дані;
+
+        |Система|
+            :Надає користувачу повідомлення про відхилення оплати;
+
+        |Користувач|
+            :Отримує повідомлення;
+
+        |Система|
+            :Завершує взаємодію;
+            stop
+
+    @enduml
+
+    </center>
+
+- ID: bobr.MONEY.EX.002
+
+    <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
+
+    @startuml
+
+        left header
+            <font color=000 size=10><b>ID:</b> bobr.MONEY.EX.002
+            <font color=000 size=10><b>НАЗВА:</b> На рахунку платника недостатня кількість коштів
+            <font color=000 size=10><b>УЧАСНИКИ:</b> Користувач, Система
+            <font color=000 size=10><b>ПЕРЕДУМОВИ:</b> 
+            <font color=000 size=10> Користувач авторизований у системі.
+            <font color=000 size=10> Користувач надіслав у систему платіжні дані з недостатньою кількістю коштів.
+            <font color=000 size=10><b>РЕЗУЛЬТАТ:</b> Повідомлення про відхилення оплати
+        end header
+
+        |Користувач|
+            start
+            :Вводить реквізити, за якими недостатньо коштів;
+
+        |Система|
+            :Надає користувачу повідомлення про відхилення оплати через недостатню кількість коштів;
+
+        |Користувач|
+            :Отримує повідомлення;
+
+        |Система|
+            :Завершує взаємодію;
+            stop
+            
+    @enduml
+
+    </center>
