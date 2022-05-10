@@ -768,7 +768,7 @@
              stop;
     @enduml
 
-    </center>
+</center>
 
 - ID: bobr.NOT_LOGGED.EX.002
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -797,7 +797,7 @@
              stop;
     @enduml
 
-    </center>
+</center>
 
 - ID: bobr.NOT_LOGGED.EX.003
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -826,7 +826,7 @@
              stop;
     @enduml
 
-    </center>
+</center>
 
 - ID: bobr.NOT_LOGGED.EX.004
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -855,7 +855,7 @@
              stop;
     @enduml
 
-    </center>
+</center>
 
 - ID: bobr.DATA.EX.001
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
@@ -887,7 +887,7 @@
 
   @enduml
 
-    </center>
+</center>
 
 - ID: bobr.DATA.EX.002
 
