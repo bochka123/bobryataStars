@@ -69,19 +69,19 @@
     usecase "**USER.004**\nПодати заявку на отримання права адміністратора" as US4
 
     usecase "**ORGANIZATION.001**\nЗареєструвати організацію" as OG1
-    usecase "**ORGANIZATION.001**\nПриєднатися до існуючої організації" as OG2
-    usecase "**ORGANIZATION.001**\nОтримати дані про організацію" as OG3
-    usecase "**ORGANIZATION.001**\nЗмінити дані про організацію" as OG4
+    usecase "**ORGANIZATION.002**\nПриєднатися до існуючої організації" as OG2
+    usecase "**ORGANIZATION.003**\nОтримати дані про організацію" as OG3
+    usecase "**ORGANIZATION.004**\nЗмінити дані про організацію" as OG4
 
-    NL .u.> US1: extends
+    NL .r.> US1: extends
     NL .u.> US2: extends
     NL .u.> US3: extends
-    NL .u.> US4: extends
+    NL .l.> US4: extends
 
-    OG .d.> OG1: extends
+    OG .l.> OG1: extends
     OG .d.> OG2: extends
     OG .d.> OG3: extends
-    OG .d.> OG4: extends
+    OG .r.> OG4: extends
 
 @enduml
 
