@@ -91,26 +91,26 @@
 <br><br>
 <center style="border-radius:4px; border: 1px solid #cfd7e6; box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025); padding: 1em;">
 
-@startuml
-    actor "Адміністратор" as Admin
+    @startuml
+        actor "Адміністратор" as Admin
 
-    usecase "**ADMIN**\nАдміністрування опитувань" as AD
+        usecase "**ADMIN**\nАдміністрування опитувань" as AD
 
-    Admin-u-> AD
+        Admin -u-> AD
 
 
-    usecase "**ADMIN.001**\nСтворити опитування" as AD1
-    usecase "**ADMIN.002**\nРедагувати опитування" as AD2
-    usecase "**ADMIN.003**\nОтримати результати опитування" as AD3
-    usecase "**ADMIN.004**\nЗакрити опитування" as AD4
-    usecase "**ADMIN.005**\nВідновити роботу опитування" as AD5
+        usecase "**ADMIN.001**\nСтворити опитування" as AD1
+        usecase "**ADMIN.002**\nРедагувати опитування" as AD2
+        usecase "**ADMIN.003**\nОтримати результати опитування" as AD3
+        usecase "**ADMIN.004**\nЗакрити опитування" as AD4
+        usecase "**ADMIN.005**\nВідновити роботу опитування" as AD5
 
-    AD .u.> AD1: extends
-    AD .u.> AD2: extends
-    AD .u.> AD3: extends
-    AD .u.> AD4: extends
-    AD .u.> AD5: extends
-@enduml
+        AD .u.> AD1: extends
+        AD .u.> AD2: extends
+        AD .u.> AD3: extends
+        AD .u.> AD4: extends
+        AD .u.> AD5: extends
+    @enduml
 
 </center>
 
