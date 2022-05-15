@@ -75,7 +75,7 @@
 
 	Poll "0,"--"1,1" Organization
 
-	Poll "0,"--"1,1" User
+	Poll "0,"--"1,1" AuthorisedUser
 
 	Question "0,"--"1,1" Poll
 
