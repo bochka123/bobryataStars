@@ -38,6 +38,8 @@
 	QuestionType "0,"-->"1,1" Answer
 	Answer "0,"-->"1,1" Question
 	Answer "0,"-->"1,1" PollResult
+	PollResult "0,"-->"1,1" Admin
+	Poll "0,"-->"1,1" PollResult
 
     User.Name--* User
     User.Email --* User
@@ -146,6 +148,10 @@
 	Answer "0,"-->"1,1" Question
 
 	Answer "0,"-->"1,1" PollResult
+
+	PollResult "0,"-->"1,1" Admin
+
+	Poll "0,"-->"1,1" PollResult
 	
 @enduml
 
