@@ -65,29 +65,29 @@
 		Result: TEXT
 	}
 
-	User "0,"--"1,1" AuthorisedUser
+	User "0,"-->"1,1" AuthorisedUser
 
-	AuthorisedUser "0,"--"1,1" Admin
+	AuthorisedUser "0,"-->"1,1" Admin
 
-	AuthorisedUser "0,"--"1,1" Organization
+	AuthorisedUser "0,"-->"1,1" Organization
 
-	Admin "0,"--"1,1" Poll
+	Admin "0,"-->"1,1" Poll
 
-	Poll "0,"--"1,1" Organization
+	Poll "0,"-->"1,1" Organization
 
-	Poll "0,"--"1,1" AuthorisedUser
+	Poll "0,"-->"1,1" AuthorisedUser
 
-	Question "0,"--"1,1" Poll
+	Question "0,"-->"1,1" Poll
 
-	AnswerOption "0,"--"1,1" Question
+	AnswerOption "0,"-->"1,1" Question
 
-	QuestionType "0,"--"1,1" Question
+	QuestionType "0,"-->"1,1" Question
 
-	QuestionType "0,"--"1,1" Answer
+	QuestionType "0,"-->"1,1" Answer
 
-	Answer "0,"--"1,1" Question
+	Answer "0,"-->"1,1" Question
 
-	Answer "0,"--"1,1" PollResult
+	Answer "0,"-->"1,1" PollResult
 	
 @enduml
 
