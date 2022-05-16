@@ -7,6 +7,78 @@
 
 ## Модель бізнес-об'єктів 
 
+@startuml
+
+	entity User <<ENTITY>> #5ED2B8
+
+	entity AuthorisedUser <<ENTITY>> #5ED2B8
+
+	entity Admin <<ENTITY>> #5ED2B8 
+
+
+	entity Organization <<ENTITY>> #5ED2B8 
+
+	entity Poll <<ENTITY>> #5ED2B8 
+
+	entity Question <<ENTITY>> #5ED2B8 
+
+	entity AnswerOption <<ENTITY>> #5ED2B8 
+
+	entity QuestionType <<ENTITY>> #5ED2B8 
+	
+	entity Answer <<ENTITY>> #5ED2B8 
+
+	entity PollResult <<ENTITY>> #5ED2B8 
+
+	User "0,"-->"1,1" AuthorisedUser
+	AuthorisedUser "0,"-->"1,1" Admin
+	AuthorisedUser "0,"-->"1,1" Organization
+	Admin "0,"-->"1,1" Poll
+	Poll "0,"-->"1,1" Organization
+	Poll "0,"-->"1,1" AuthorisedUser
+	Question "0,"-->"1,1" Poll
+	AnswerOption "0,"-->"1,1" Question
+	QuestionType "0,"-->"1,1" Question
+	QuestionType "0,"-->"1,1" Answer
+	Answer "0,"-->"1,1" Question
+	Answer "0,"-->"1,1" PollResult
+
+        User.Authorised --* User
+
+        AuthorisedUser.Name--* AuthorisedUser
+        AuthorisedUser.Email --* AuthorisedUser
+        AuthorisedUser.Password --* AuthorisedUser
+        AuthorisedUser.Organization --* AuthorisedUser
+
+	Admin.NumberOfCreatedPolls --* Admin 
+
+        Organization.Name --* Organization 
+        Organization.Description --* Organization 
+        Organization.CreationDate --* Organization 
+
+        Poll.Title --* Poll
+        Poll.Description --* Poll
+        Poll.ForWhichOrganization --* Poll
+
+        Question.Type --* Question
+        Question.Description --* Question
+
+        AnswerOption.Name --* AnswerOption
+        AnswerOption.Index --* AnswerOption
+
+        QuestionType.Name --* QuestionType
+        QuestionType.Description  --* QuestionType
+
+        Answer.Content --* Answer
+        Answer.Question --* Answer
+        Answer.Type --* Answer
+
+        PollResult.Date --* PollResult
+        PollResult.Respondent --* PollResult
+        PollResult.Result --* PollResult
+
+@enduml
+
 ## ER-модель
 
 @startuml
