@@ -156,3 +156,4 @@
 @enduml
 
 ## Реляційна схема
+![eer](https://github.com/bochka123/bobryataStars/blob/lordoleksiy/docs/design/media/pic.png)
