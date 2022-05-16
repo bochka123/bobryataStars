@@ -11,8 +11,6 @@
 
 	entity User <<ENTITY>> #5ED2B8
 
-	entity AuthorisedUser <<ENTITY>> #5ED2B8
-
 	entity Admin <<ENTITY>> #5ED2B8 
 
 	entity Organization <<ENTITY>> #5ED2B8 
@@ -29,12 +27,11 @@
 
 	entity PollResult <<ENTITY>> #5ED2B8 
 
-	User "0,"-->"1,1" AuthorisedUser
-	AuthorisedUser "0,"-->"1,1" Admin
-	AuthorisedUser "0,"-->"1,1" Organization
+	User "0,"-->"1,1" Admin
+	User "0,"-->"1,1" Organization
 	Admin "0,"-->"1,1" Poll
 	Poll "0,"-->"1,1" Organization
-	Poll "0,"-->"1,1" AuthorisedUser
+	Poll "0,"-->"1,1" User
 	Question "0,"-->"1,1" Poll
 	AnswerOption "0,"-->"1,1" Question
 	QuestionType "0,"-->"1,1" Question
@@ -42,12 +39,10 @@
 	Answer "0,"-->"1,1" Question
 	Answer "0,"-->"1,1" PollResult
 
-    User.Authorised --* User
-
-    AuthorisedUser.Name--* AuthorisedUser
-    AuthorisedUser.Email --* AuthorisedUser
-    AuthorisedUser.Password --* AuthorisedUser
-    AuthorisedUser.Organization --* AuthorisedUser
+    User.Name--* User
+    User.Email --* User
+    User.Password --* User
+    User.Organization --* User
 
 	Admin.NumberOfCreatedPolls --* Admin 
 
@@ -57,7 +52,6 @@
 
     Poll.Title --* Poll
     Poll.Description --* Poll
-    Poll.ForWhichOrganization --* Poll
 
     Question.Type --* Question
     Question.Description --* Question
@@ -83,10 +77,6 @@
 @startuml
 
 	entity User <<ENTITY>> {
-		Authorised: BOOL
-	}
-
-	entity AuthorisedUser <<ENTITY>> {
 		Name: TEXT
 		Password: TEXT
 		Email: TEXT
@@ -106,7 +96,6 @@
 	entity Poll <<ENTITY>> {
 		Title: TEXT
 		Description: TEXT
-		ForWhichOrganization: TEXT
 	}
 
 	entity Question <<ENTITY>> {
@@ -136,17 +125,15 @@
 		Result: TEXT
 	}
 
-	User "0,"-->"1,1" AuthorisedUser
+	User "0,"-->"1,1" Admin
 
-	AuthorisedUser "0,"-->"1,1" Admin
-
-	AuthorisedUser "0,"-->"1,1" Organization
+	User "0,"-->"1,1" Organization
 
 	Admin "0,"-->"1,1" Poll
 
 	Poll "0,"-->"1,1" Organization
 
-	Poll "0,"-->"1,1" AuthorisedUser
+	Poll "0,"-->"1,1" User
 
 	Question "0,"-->"1,1" Poll
 
