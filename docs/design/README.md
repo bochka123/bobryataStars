@@ -15,7 +15,6 @@
 
 	entity Admin <<ENTITY>> #5ED2B8 
 
-
 	entity Organization <<ENTITY>> #5ED2B8 
 
 	entity Poll <<ENTITY>> #5ED2B8 
@@ -43,39 +42,39 @@
 	Answer "0,"-->"1,1" Question
 	Answer "0,"-->"1,1" PollResult
 
-        User.Authorised --* User
+    User.Authorised --* User
 
-        AuthorisedUser.Name--* AuthorisedUser
-        AuthorisedUser.Email --* AuthorisedUser
-        AuthorisedUser.Password --* AuthorisedUser
-        AuthorisedUser.Organization --* AuthorisedUser
+    AuthorisedUser.Name--* AuthorisedUser
+    AuthorisedUser.Email --* AuthorisedUser
+    AuthorisedUser.Password --* AuthorisedUser
+    AuthorisedUser.Organization --* AuthorisedUser
 
 	Admin.NumberOfCreatedPolls --* Admin 
 
-        Organization.Name --* Organization 
-        Organization.Description --* Organization 
-        Organization.CreationDate --* Organization 
+    Organization.Name --* Organization 
+    Organization.Description --* Organization 
+    Organization.CreationDate --* Organization 
 
-        Poll.Title --* Poll
-        Poll.Description --* Poll
-        Poll.ForWhichOrganization --* Poll
+    Poll.Title --* Poll
+    Poll.Description --* Poll
+    Poll.ForWhichOrganization --* Poll
 
-        Question.Type --* Question
-        Question.Description --* Question
+    Question.Type --* Question
+    Question.Description --* Question
 
-        AnswerOption.Name --* AnswerOption
-        AnswerOption.Index --* AnswerOption
+    AnswerOption.Name --* AnswerOption
+    AnswerOption.Index --* AnswerOption
 
-        QuestionType.Name --* QuestionType
-        QuestionType.Description  --* QuestionType
+    QuestionType.Name --* QuestionType
+    QuestionType.Description  --* QuestionType
 
-        Answer.Content --* Answer
-        Answer.Question --* Answer
-        Answer.Type --* Answer
+    Answer.Content --* Answer
+    Answer.Question --* Answer
+    Answer.Type --* Answer
 
-        PollResult.Date --* PollResult
-        PollResult.Respondent --* PollResult
-        PollResult.Result --* PollResult
+    PollResult.Date --* PollResult
+    PollResult.Respondent --* PollResult
+    PollResult.Result --* PollResult
 
 @enduml
 
