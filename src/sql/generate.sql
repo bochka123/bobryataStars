@@ -1,11 +1,3 @@
-# Реалізація інформаційного та програмного забезпечення
-
-В рамках проекту розробляється: 
-- SQL-скрипт для створення на початкового наповнення бази даних
-- RESTfull сервіс для управління даними
-
-## SQL-скрипт для створення на початкового наповнення бази даних
-```sql
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
@@ -286,8 +278,3 @@ INSERT INTO `mydb`.`Answer` (`id`, `Content`, `Question_Id`, `PollResult_id`) VA
 INSERT INTO `mydb`.`Answer` (`id`, `Content`, `Question_Id`, `PollResult_id`) VALUES (5, 'Ні', 2, 1);
 INSERT INTO `mydb`.`Answer` (`id`, `Content`, `Question_Id`, `PollResult_id`) VALUES (6, 'До середини 2025', 3, 1);
 COMMIT;
-```
-
-## RESTfull сервіс для управління даними
-
-REST API написано з використання Node.js і Express framework. Вихідний код доступний за посиланням: [тут](https://github.com/bochka123/bobryataStars/tree/dev/src/js); у наступному розділі цей API протестовано.
